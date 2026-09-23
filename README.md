@@ -167,3 +167,58 @@ WHERE available = TRUE;
 ```
 
 ---
+
+## Update Operations
+
+### Mark a Book as Borrowed
+Example: Mark book titled `1984` as unavailable.
+
+```sql
+UPDATE books
+SET available = FALSE
+WHERE title = '1984';
+```
+
+Verify the change:
+
+```sql
+SELECT *
+FROM books
+WHERE title = '1984';
+```
+
+### Add a New Genre to an Existing Book
+Example: Add `Science Fiction` to book titled `1984`
+
+```sql
+UPDATE books
+SET genres = array_append(genres, 'Science Fiction')
+WHERE title = '1984';
+```
+
+Verify:
+
+```sql
+SELECT id, title, genres
+FROM books
+WHERE title = '1984';
+```
+
+### Add a Borrowed Book to a Patron's Record
+Example: Add book ID 3 to patron ID 1.
+
+```sql
+UPDATE patrons
+SET borrowed_books = array_append(borrowed_books, 3)
+WHERE id = 1;
+```
+
+Verify:
+
+```sql
+SELECT *
+FROM patrons
+WHERE id = 1;
+```
+
+---
