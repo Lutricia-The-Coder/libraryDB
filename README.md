@@ -126,3 +126,44 @@ INSERT INTO patrons (
 ```
 
 ---
+
+##  Read Operations
+   WILL BE USING THE BOOK '1984' AS AN EXAMPLE THROUGHOUT
+
+### Get All Books
+
+```sql
+SELECT *
+FROM books;
+```
+
+### Get a Book by Title
+ 
+ Example: Find the book titled `1984`
+
+```sql
+SELECT *
+FROM books
+WHERE title = '1984';
+```
+
+### Get All Books by a Specific Author
+
+YOU CAN CHOOSE ANY AUTHOR NAME FROM THE TABLE
+
+```sql
+SELECT books.*
+FROM books
+JOIN authors ON books.author_id = authors.id
+WHERE authors.name = 'George Orwell';
+```
+
+### Get All Available Books
+
+```sql
+SELECT *
+FROM books
+WHERE available = TRUE;
+```
+
+---
