@@ -17,6 +17,18 @@ The system allows users to:
 **Database:** PostgreSQL  
 **Tool Used:** pgAdmin 4  
 
+## How to Run the SQL in pgAdmin 4
+
+1. Open **pgAdmin 4**.
+2. Create a database named `LibraryDB`.
+3. Right-click `LibraryDB`.
+4. Select **Query Tool**.
+5. Copy and paste the SQL commands into the Query Tool.(see below)
+6. Run each command by clicking the **Execute** button.
+7. Check the results in the **Data Output** section.
+8. Expand the database tree and open **Schemas => public => Tables** to view the created tables.
+
+
 ---
 
 ##  Project Setup
