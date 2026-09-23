@@ -222,3 +222,30 @@ WHERE id = 1;
 ```
 
 ---
+
+##  Delete Operations
+
+### Delete a Book by Title
+Example: Delete `Mrs Dalloway`.
+
+```sql
+DELETE FROM books
+WHERE title = 'Mrs Dalloway';
+```
+
+Verify:
+
+```sql
+SELECT *
+FROM books;
+```
+
+### Delete an Author by ID
+Example: Delete author ID 10.
+
+```sql
+DELETE FROM authors
+WHERE id = 10;
+```
+
+---
