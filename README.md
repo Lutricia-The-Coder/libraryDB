@@ -249,3 +249,70 @@ WHERE id = 10;
 ```
 
 ---
+
+## Advanced Queries
+
+### Find Books Published After 1950
+
+```sql
+SELECT *
+FROM books
+WHERE published_year > 1950;
+```
+
+### Find All American Authors
+
+```sql
+SELECT *
+FROM authors
+WHERE nationality = 'American';
+```
+
+### Set All Books to Available
+
+```sql
+UPDATE books
+SET available = TRUE;
+```
+
+Verify:
+
+```sql
+SELECT id, title, available
+FROM books;
+```
+
+### Find Books That Are Available and Published After 1950
+
+```sql
+SELECT *
+FROM books
+WHERE available = TRUE
+  AND published_year > 1950;
+```
+
+### Find Authors Whose Names Contain "George"
+
+```sql
+SELECT *
+FROM authors
+WHERE name ILIKE '%George%';
+```
+
+### Increment the Published Year 1869 by 1
+
+```sql
+UPDATE books
+SET published_year = published_year + 1
+WHERE published_year = 1869;
+```
+
+Verify:
+
+```sql
+SELECT *
+FROM books
+WHERE published_year = 1870;
+```
+
+---
