@@ -238,11 +238,11 @@ WHERE id = 1;
 ##  Delete Operations
 
 ### Delete a Book by Title
-Example: Delete `Mrs Dalloway`.
+Example: Delete `Moby-Dick`.
 
 ```sql
 DELETE FROM books
-WHERE title = 'Mrs Dalloway';
+WHERE title = 'Moby-Dick ';
 ```
 
 Verify:
